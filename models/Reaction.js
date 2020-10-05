@@ -1,10 +1,10 @@
 const moment = require('moment');
-const { Schema, model, Types } = require('mongoose');
-const Thought = require('./Thought');
+const { Schema, Types } = require('mongoose');
+const thought = require('./Thought');
 
 
 const reactionSchema = new Schema(
-    { //(SCHEMA ONLY)
+    {
         reactionId: {
             //Use Mongoose's ObjectId data type
             type: Schema.Types.ObjectId,
@@ -18,7 +18,7 @@ const reactionSchema = new Schema(
         },
         username: {
             type: String,
-            required: 'Username is Required',
+            required: true,
         },
         createdAt: {
             type: Date,
@@ -29,8 +29,9 @@ const reactionSchema = new Schema(
     {
         toJSON: {
             getters: true
-        }
-    });
+        },
+    }
+);
 
 //Schema Setting: This will not be a model, but rather used as the `reaction` field's subdocument schema in the `Thought` model.*/
 module.exports = reactionSchema;

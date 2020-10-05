@@ -6,7 +6,7 @@ const thoughtSchema = new Schema(
     {
         thoughtText: {
             type: String,
-            required: 'You need to leave a thought!',
+            required: true,
             minlength: 1,
             maxlength: 280,
         },
@@ -17,13 +17,13 @@ const thoughtSchema = new Schema(
         },
         username: {
             type: String,
-            required: 'Password is required',
-            minlength: 6
+            required: true,
         },
         reactions: [reactionSchema],
     },
     {
         toJSON: {
+            virtuals: true,
             getters: true
         },
         id: false,

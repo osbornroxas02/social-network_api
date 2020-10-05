@@ -3,9 +3,6 @@ const { User, Thought } = require('../models');
 
 // `GET` to get all thought
 const thoughtController = {
-
-    // TODO add getAllThoughts
-
     getAllThought(req, res) {
         Thought.find({})
             .then(thoughtData => res.json(thoughtData))

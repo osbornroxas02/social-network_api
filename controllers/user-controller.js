@@ -1,5 +1,5 @@
 // **`/api/users`**
-const { User, tho } = require('../models');
+const { User, Thought } = require('../models');
 
 const userController = {
     //get all users
@@ -37,14 +37,17 @@ const userController = {
                 res.status(400).json(err)
             });
     },
+
     //create new user
     addNewUser({body},res) {
         User.create(body)
         .then(userData =>res.json(userData))
         .catch(err => {
+            console.log(err);
             res.status(400).json(err)
         });
     },
+
     //update user by id
     updateUser({params, body},res) {
         User.findOneAndUpdate(
@@ -74,6 +77,7 @@ const userController = {
         })
         .catch(err => res.status(400).json(err));
     },
+
     //add new friend
     addFriend({params},res){
         User.findOneAndUpdate(
