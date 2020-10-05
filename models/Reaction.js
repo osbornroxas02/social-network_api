@@ -14,7 +14,6 @@ const reactionSchema = new Schema(
         reactionBody: {
             type: String,
             require: true,
-            minlength: 1,
             maxlength: 280,
         },
         username: {
@@ -25,8 +24,12 @@ const reactionSchema = new Schema(
             type: Date,
             default: Date.now,
             get: createdAtVal => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
-        },
-
+        }
+    },
+    {
+        toJSON: {
+            getters: true
+        }
     });
 
 //Schema Setting: This will not be a model, but rather used as the `reaction` field's subdocument schema in the `Thought` model.*/
