@@ -1,6 +1,6 @@
 
 # NoSQL: Social Network API
-![ReadMe Image](https://github.com/osbornroxas02/budget-tracker-pwa/blob/main/budget-main.png)
+![ReadMe Image](https://github.com/osbornroxas02/social-network_api/blob/master/Screen%20Shot%202020-10-10%20at%201.11.46%20AM.png)
  
 ---
 
@@ -16,7 +16,8 @@
 
 ## Description 
 
-This Budget App Tracker app gives the users a fast and easy way to track their money!
+This Social Network API projects goal  was to create a program that uses a NoSQL database
+so that the website can handle large amounts of unstructured data
 
 ---
 
@@ -24,7 +25,16 @@ This Budget App Tracker app gives the users a fast and easy way to track their m
 
 ![ReadMe Image](https://github.com/osbornroxas02/budget-tracker-pwa/blob/main/budget.example.png)
 
-Name the account, enter the amount and choose to either "Add Funds" or "Subtract Funds". The app will then create a graph of your expenses.
+Assignment goal:
+GIVEN a social network API
+WHEN I enter the command to invoke the application
+THEN my server is started and the Mongoose models are synced to the MongoDB database
+WHEN I open API GET routes in Insomnia Core for users and thoughts
+THEN the data for each of these routes is displayed in a formatted JSON
+WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
+THEN I am able to successfully create, update, and delete users and thoughts in my database
+WHEN I test API POST and DELETE routes in Insomnia Core
+THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 
 
 ---
