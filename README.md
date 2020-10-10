@@ -23,8 +23,6 @@ so that the website can handle large amounts of unstructured data
 
 ## How To Use
 
-![ReadMe Image]()
-
 Assignment goal:
 GIVEN a social network API
 WHEN I enter the command to invoke the application
