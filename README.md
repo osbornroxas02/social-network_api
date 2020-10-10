@@ -23,7 +23,7 @@ so that the website can handle large amounts of unstructured data
 
 ## How To Use
 
-![ReadMe Image](https://github.com/osbornroxas02/budget-tracker-pwa/blob/main/budget.example.png)
+![ReadMe Image]()
 
 Assignment goal:
 GIVEN a social network API
